@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>План</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: #738cdb;
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(252, 251, 250);
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .plans-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 968px) {
+        .plans-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .plan-card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+
+    .plan-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #f0f0f0;
+    }
+
+    .plan-icon {
+        font-size: 3em;
+        margin-right: 20px;
+    }
+
+    .plan-title {
+        font-size: 1.8em;
+        font-weight: 700;
+    }
+
+    .plan-subtitle {
+        color: #666;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    .backend .plan-title {
+        color: #e74c3c;
+    }
+
+    .frontend .plan-title {
+        color: #3498db;
+    }
+
+    .month {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border-left: 4px solid #667eea;
+    }
+
+    .month-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .month-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    .month-badge {
+        background: #667eea;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+    }
+
+    .week {
+        margin-bottom: 15px;
+        padding-left: 15px;
+        border-left: 2px solid #ddd;
+    }
+
+    .week-title {
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 8px;
+        font-size: 0.95em;
+    }
+
+    .topics {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .topics li {
+        padding: 6px 0;
+        padding-left: 20px;
+        position: relative;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .topics li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+    }
+
+    .result {
+        margin-top: 15px;
+        padding: 12px;
+        background: #e8f5e9;
+        border-radius: 8px;
+        border-left: 3px solid #4caf50;
+    }
+
+    .result-title {
+        font-weight: 600;
+        color: #2e7d32;
+        margin-bottom: 5px;
+    }
+
+    .result-text {
+        color: #555;
+        font-size: 0.9em;
+    }
+
+    .tech-stack {
+        margin-top: 20px;
+        padding: 15px;
+        background: #fff3e0;
+        border-radius: 8px;
+    }
+
+    .tech-stack-title {
+        font-weight: 600;
+        color: #e65100;
+        margin-bottom: 10px;
+    }
+
+    .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tech-tag {
+        background: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.85em;
+        color: #e65100;
+        border: 1px solid #ffcc80;
+    }
+
+    .footer {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        padding: 20px;
+        font-size: 1.1em;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .emoji {
+        font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>План</h1>
+    <div class="plans-grid">
+        <!-- Backend Plan -->
+        <div class="plan-card backend">
+            <div class="plan-header">
+                <div>
+                    <div class="plan-title">Backend (Алексеев Михаил)</div>
+                    <div class="plan-subtitle">Сервер, база данных, шифрование</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 1: Основы Python и сеть</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: Python</div>
+                    <ul class="topics">
+                        <li>Синтаксис, переменные, типы данных</li>
+                        <li>Функции, ООП (классы, наследование)</li>
+                        <li>Работа с файлами, обработка ошибок</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: Asyncio + Сокеты</div>
+                    <ul class="topics">
+                        <li>Asyncio: async/await, event loop</li>
+                        <li>Модуль socket (TCP/UDP)</li>
+                        <li>Простой чат-сервер на сокетах</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Консольный чат, где два клиента могут переписываться в реальном времени</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 2: FastAPI + WebSocket</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: FastAPI</div>
+                    <ul class="topics">
+                        <li>REST API: GET, POST, PUT, DELETE</li>
+                        <li>Pydantic модели (валидация данных)</li>
+                        <li>Uvicorn (ASGI сервер)</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: WebSocket + PostgreSQL</div>
+                    <ul class="topics">
+                        <li>WebSocket в FastAPI</li>
+                        <li>PostgreSQL + asyncpg</li>
+                        <li>SQLAlchemy ORM</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Веб-чат с регистрацией, хранением сообщений в БД и реальным временем</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 3: Интеграция и авторизация</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: JWT + CORS</div>
+                    <ul class="topics">
+                        <li>JWT токены (авторизация)</li>
+                        <li>CORS (разрешение запросов с фронтенда)</li>
+                        <li>Middleware для проверки токенов</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: Совместная работа</div>
+                    <ul class="topics">
+                        <li>Git (ветки, merge, pull requests)</li>
+                        <li>API контракты с другом</li>
+                        <li>Swagger документация</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Полностью рабочий чат с интерфейсом друга, авторизацией и базой данных</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 4: Шифрование</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: Криптография</div>
+                    <ul class="topics">
+                        <li>Библиотека cryptography / PyNaCl</li>
+                        <li>шифрование сообщений</li>
+                        <li>Обмен ключами</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: TLS</div>
+                    <ul class="topics">
+                        <li>TLS/SSL (HTTPS/WSS)</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Зашифрованный чат с безопасной передачей данных</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 5: Тест и исправление ошибок</div>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Готовый проект, работающий на реальном сервере с HTTPS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend Plan -->
+        <div class="plan-card frontend">
+            <div class="plan-header">
+                <div>
+                    <div class="plan-title">Frontend (Евгений Морейдо)</div>
+                    <div class="plan-subtitle">Интерфейс, клиентская логика, UX</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 1: HTML + CSS + JS основы</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: HTML + CSS</div>
+                    <ul class="topics">
+                        <li>Семантические теги (header, main, section)</li>
+                        <li>Изучение HTML и CSS</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: JavaScript</div>
+                    <ul class="topics">
+                        <li>Переменные, функции, массивы, объекты</li>
+                        <li>DOM: querySelector, addEventListener</li>
+                        <li>События: click, input, submit</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Статичный макет чатаа</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 2: JS + Сеть</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: ES6+</div>
+                    <ul class="topics">
+                        <li>async/await, Promises</li>
+                        <li>Деструктуризация, spread/rest</li>
+                        <li>Модули (import/export)</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: Fetch + WebSocket</div>
+                    <ul class="topics">
+                        <li>JSON (stringify/parse)</li>
+                        <li>Fetch API / Axios</li>
+                        <li>WebSocket API (send, onmessage, onopen)</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Чат с фейковыми данными, форма логина, WebSocket-клиент с эхо-сообщениями</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 3: Фреймворк + Инструменты</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1: Установка</div>
+                    <ul class="topics">
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>Структура проекта</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 2-4: Фреймворк</div>
+                    <ul class="topics">
+                        <li>Компоненты, State, Props</li>                          <li>npm/yarn</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Резульат:</div>
+                    <div class="result-text">Интерфейс на React с компонентами: ChatList, MessageBubble, InputField. Код на GitHub</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 4: UI + Интеграция</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: UI-библиотека</div>
+                    <ul class="topics">
+                        <li>Material UI</li>
+                        <li>Стилизация компонентов</li>
+                        <li>Темная/светлая тема</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4:API</div>
+                    <ul class="topics">
+                        <li>Подключение к бэкенду</li>
+                        <li>JWT токены в localStorage</li>
+                        <li>Обработка ошибок (401 → логин)</li>
+                        <li>Загрузка картинок (FormData)</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Полностью рабочий чат с интерфейсом, подключенный к бэкенду</div>
+                </div>
+            </div>
+
+            <div class="month">
+                <div class="month-header">
+                    <div class="month-title">Месяц 5: Криптография + Полировка</div>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 1-2: E2EE</div>
+                    <ul class="topics">
+                        <li>Crypto-js / TweetNaCl-js</li>
+                        <li>Генерация ключей на клиенте</li>
+                        <li>Шифрование/расшифровка сообщений</li>
+                    </ul>
+                </div>
+                <div class="week">
+                    <div class="week-title">Неделя 3-4: UX + Оптимизация</div>
+                    <ul class="topics">
+                        <li>Пагинация, поиск по чатам</li>
+                        <li>Исправление багов</li>
+                    </ul>
+                </div>
+                <div class="result">
+                    <div class="result-title">Результат:</div>
+                    <div class="result-text">Готовый продукт с шифрованием, интерфейсом и всеми базовыми функциями</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
