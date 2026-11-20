@@ -33,7 +33,7 @@ async def websocket_endpoint(
     websocket: WebSocket, 
     room_id: int, 
     user_id: int, 
-    username: str = Query(...)  # ✅ Явно указываем, что это query-параметр
+    username: str = Query(...)
 ):
     await manager.connect(websocket, room_id, user_id)
     await manager.broadcast(f"{username} (ID: {user_id}) присоединился к чату.", room_id, user_id)
