@@ -15,7 +15,7 @@ async def join_chat(request: Request):
     form = await request.form()
     username = form.get("username")
     room_id = form.get("room_id")
-    user_id = random.randint(1000, 9999)  # ✅ Генерируем ID пользователя
+    user_id = random.randint(1000, 9999)
 
     return templates.TemplateResponse(
         request,
@@ -23,6 +23,6 @@ async def join_chat(request: Request):
         {
             "username": username,
             "room_id": room_id,
-            "user_id": user_id,  # ✅ Передаём в шаблон
+            "user_id": user_id,
         },
     )
